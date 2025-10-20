@@ -224,7 +224,20 @@
             text-align: center;
             transition: var(--duration) ease-in-out;
             transition-delay: var(--letter-delay);
-            overflow: hidden;
+            
+            /* 🔧 Cambios clave */
+            overflow-y: auto;          /* Permite hacer scroll si el texto es largo */
+            scrollbar-width: thin;     /* Hace el scroll más delgado */
+            max-height: var(--letter-height);
+        }
+
+        /* Scrollbar bonito */
+        .letter::-webkit-scrollbar {
+            width: 6px;
+        }
+        .letter::-webkit-scrollbar-thumb {
+            background-color: #f2b6b6;
+            border-radius: 3px;
         }
 
         .letter>svg.snowman {
